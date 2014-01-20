@@ -1,0 +1,377 @@
+/*
+Theme Name: BrokenDoor
+Theme URI: http://brokendoor.radatom.com
+Version: 1
+Description: An entirely custom theme provided by Rad Atom Technologies.
+Author: Rad Atom
+Author URI: http://radatom.com
+*/
+
+body{
+	margin: 0px;
+	font-family: 'Tunga';
+	font-weight: bold;
+	color: #e7e7e7;
+	background:url(img/background.png);
+	background-size:100%;
+	background-repeat:repeat-y;
+}
+
+a{
+	color: #e7e7e7;
+}
+
+.rounded-corners{
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	border-style: solid;
+	border-width: 10px;
+	border-color: #cd2027;
+	padding: 6px;
+	-webkit-box-shadow:  inset 0 0 1.5em 0.6em rgba(57, 57, 57, 0.9),
+	0 0 1.55em 0.6em rgba(57, 57, 57, 0.7);
+	box-shadow:  inset 0 0 1.5em 0.6em rgba(57, 57, 57, 0.9),
+	0 0 1.55em 0.6em rgba(57, 57, 57, 0.7);
+}
+
+.attention{
+	background: #464646;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	border-style: solid;
+	border-width: 2px;
+	border-color: #3b3a3a;
+}
+
+
+
+.sidebar-attention{
+	padding-top: 10px;
+	background: #464646;
+	min-height: 350px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	border-style: solid;
+	border-width: 2px;
+	border-color: #3b3a3a;
+}
+
+.rotated-text-right {
+	/*Transform mq*/
+	font-size: 120%;
+	color: #e7e7e7;
+	text-align: center;
+	white-space: nowrap;
+}
+.rotated-text-right:hover {
+	color: #FFF;
+}
+.scroller-attention {
+	min-height: 65px;
+	padding: 1em 0 0 0;
+
+	/* Good way to seperate the styles that are always in effect and viewport styles
+	for me has been to delcare the styles that change first then a return followed by
+	the syles that do not change with media queries.
+	 */
+	background-color: #464646;
+}
+/*Shadow*/
+.scroller-attention,
+.scroller-attention:hover,
+.scroller-attention:focus {
+	-webkit-box-shadow:  inset 0.25em 0.25em 1.2em 0.75em rgba(57, 57, 57, 0.9); /* Android 2.3+, iOS 4.0.2-4.2, Safari 3-4 */
+    box-shadow:  inset 0.25em 0.25em 1.2em 0.75em rgba(57, 57, 57, 0.9); /* Chrome 6+, Firefox 4+, IE 9+, iOS 5+, Opera 10.50+ */
+}
+/*Hover*/
+ .scroller-attention:hover,
+ .scroller-attention:focus {
+	 background-color: #393939;
+}
+.scroller-attention,
+.scroller-attention:hover,
+.scroller-attention:focus {
+	-webkit-transition: background-color 600ms linear;
+	transition: background-color 600ms linear;
+}
+/* Container for each slide that is show/hide */
+.slide-content {
+	padding: 0.75em;
+}
+
+
+@media screen and (min-width: 64.063em) {
+	.rotated-text-right {
+		-webkit-transform: rotate(90deg);
+		-moz-transform: rotate(90deg);
+		transform: rotate(90deg);
+	}
+	.scroller-attention{
+		min-height: 250px;
+		padding: 10% 0 0 0;
+	}
+}
+
+.current_page_item{
+	background-color: #363636;
+}
+/*
+====================================================
+HEADER PARTS BEGIN
+====================================================
+*/
+
+#header{
+	background: url("img/top-nav-background2.0.png") no-repeat scroll 0% 0% / 10% auto transparent;
+min-height: 222px;
+padding-top: 10px;
+}
+
+#top-nav-wrapper li{
+	display: inline;
+	list-style-type: none;
+	padding-top: 5px;
+}
+
+#top-nav-wrapper a{
+	font-family: 'Tunga';
+	font-size: 24px;
+	font-weight: bold;
+	color: #e7e7e7;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+#top-nav{
+	margin-top: 15px;
+}
+
+#header-social{
+
+}
+
+#header-scroller-wrapper{
+	background:url(img/scroller-background.png);
+	background-size:100%;
+	background-repeat:repeat-y;
+	min-height: 250px;
+	margin-top: 10px;
+}
+
+#header-branding{
+
+}
+
+#header-branding h2{
+	font-size: 24px;
+	color: #e0e0e0;
+	float: left;
+	margin-top: 10px;
+	margin-left: 15px;
+}
+
+#header-branding h3{
+	font-size: 12px;
+	color: #c8c8c8;
+	float: right;
+	margin-top: 20px;
+}
+
+#header-branding-logo{
+	float: right;
+	margin-bottom: 0px;
+	margin-top: 1.25em; 
+}
+
+#header-branding-logo li{
+	display: inline;
+	list-style-type: none;
+	margin-right: 20px;
+}
+/*
+====================================================
+HEADER PARTS END
+====================================================
+*/
+
+
+
+
+/*
+====================================================
+CONTENT PARTS BEGIN
+====================================================
+*/
+
+#what{
+	padding-right: 6px;
+}
+
+#how{
+	padding-left: 6px;
+}
+
+#content-abouts-wrapper{
+	margin-top: 20px;
+}
+
+#home-content-wrapper{
+	margin-top: 10px;
+}
+
+#home-content{
+	margin-bottom: 20px;
+}
+
+#internal-content-wrapper{
+	margin-top: 10px;
+	margin-top: 10px;
+}
+
+#internal-content{
+	margin-bottom: 20px;
+}
+
+/*
+====================================================
+CONTENT PARTS END
+====================================================
+*/
+
+
+
+
+/*
+====================================================
+FOOTER PARTS BEGIN
+====================================================
+*/
+
+#footer{
+	margin-top: 25px;
+}
+
+#footer-set-photos-widget{
+
+}
+
+#footer-set-photos-widget li{
+}
+
+#footer-feed-widget{
+
+}
+
+#footer-feed-widget{
+
+}
+
+#footer-nav-widget{
+
+}
+
+#footer-nav-widget li{
+	list-style-type: none;
+	margin-right: 20px;
+	text-align: center;
+}
+
+#footer-nav-widget a{
+	font-size: 24px;
+}
+
+/*
+====================================================
+FOOTER PARTS END
+====================================================
+*/
+
+
+#members-overview{
+
+}
+
+#members-overview a{
+	position: relative;
+}
+
+#members-overview h4{
+	font-size: 100%;
+	padding: 5px;
+	position: absolute;
+margin-left: 5%;
+margin-top: 5%;
+}
+
+#members-overview h3{
+	font-size: 100%;
+	padding: 5px;
+	background: #464646;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	border-style: solid;
+	border-width: 2px;
+	border-color: #3b3a3a;
+}
+
+#skills-overview{
+
+}
+
+#skills-overview a{
+	position: relative;
+}
+
+#skills-overview h4{
+	font-size: 100%;
+	padding: 5px;
+	position: absolute;
+margin-left: 5%;
+margin-top: 5%;
+}
+
+#skills-overview h3{
+	font-size: 100%;
+	padding: 5px;
+	background: #464646;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	border-style: solid;
+	border-width: 2px;
+	border-color: #3b3a3a;
+}
+
+#projects-overview{
+
+}
+
+#projects-overview a{
+	position: relative;
+}
+
+#projects-overview h4{
+	font-size: 100%;
+padding: 5px;
+position: absolute;
+margin-left: 5%;
+margin-top: 5%;
+}
+
+#projects-overview h3{
+	font-size: 100%;
+	padding: 5px;
+	background: #464646;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	border-style: solid;
+	border-width: 2px;
+	border-color: #3b3a3a;
+}
+
+
+#team-portfolio-related-overviews{
+	border-radius: 5px;
+	border-style: solid;
+	border-width: 2px;
+	border-color: #3b3a3a;
+}
