@@ -27,8 +27,8 @@ $right = $rightPagesReturn[0];
 
 
 	<div id="content-abouts-wrapper" class="row">
-		<div class="large-5 columns" id="what">
-			<div class="row  rounded-corners">
+		<div class="large-3 columns" id="what">
+			<div class="row">
 				<div class="small-12 large-2 columns scroller-attention">
 					<h3 class="rotated-text-right"><?php echo $left->post_title?></h3>
 				</div>
@@ -37,14 +37,15 @@ $right = $rightPagesReturn[0];
 				</div>
 			</div>
 		</div>
-		<div class="large-5 offset-2 columns" id="how">
-			<div class="row  rounded-corners">
-				
-				<div class="small-12 large-2 columns scroller-attention">
-					<h3 class="rotated-text-right"><?php echo $right->post_title?></h3>
-				</div>
+		<div class="large-6 columns" id="youtube">
+		</div>
+		<div class="large-3 columns" id="how">
+			<div class="row">
 				<div class="small-12 large-10 slide-content columns">
 					<?php echo $options['right_home_box_page_text'];?>
+				</div>
+				<div class="small-12 large-2 columns scroller-attention">
+					<h3 class="rotated-text-right"><?php echo $right->post_title?></h3>
 				</div>
 			</div>
 		</div>

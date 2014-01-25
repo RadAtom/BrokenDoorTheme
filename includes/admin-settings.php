@@ -25,11 +25,8 @@ function make_front_page_pretty($input){
         if( !is_numeric( $input['right_home_box_page'] ) )
             $input['right_home_box_page'] = ''; 
 
-        if( !empty( $input['left_home_box_page_text'] ) )
-            $input['left_home_box_page_text'] = sanitize_text_field( $input['left_home_box_page_text'] );
-
-        if( !empty( $input['right_home_box_page_text'] ) )
-            $input['right_home_box_page_text'] = sanitize_text_field( $input['right_home_box_page_text'] );
+        if( !empty( $input['front_youtube_link'] ) )
+            $input['front_youtube_link'] = sanitize_text_field( $input['front_youtube_link'] );
 
         return $input;
 }
@@ -46,11 +43,6 @@ function register_brokendoor_appearance_settingsfroms(){
 		'render_leftbox_input' ,
 		'theme-settings' ,
 		'broken_door_media_appearance_options');
-	add_settings_field('left_home_box_page_text' ,
-		'Left Box Text' ,
-		'render_leftbox_text_input' ,
-		'theme-settings' ,
-		'broken_door_media_appearance_options');
 
 	add_settings_field('right_home_box_page' ,
 		'Right Box' ,
@@ -58,9 +50,9 @@ function register_brokendoor_appearance_settingsfroms(){
 		'theme-settings' ,
 		'broken_door_media_appearance_options');
 
-	add_settings_field('right_home_box_page_text' ,
-		'Right Box Text' ,
-		'render_rightbox_text_input' ,
+	add_settings_field('front_youtube_link' ,
+		'Youtube Link for front page video' ,
+		'render_youtube_link_input' ,
 		'theme-settings' ,
 		'broken_door_media_appearance_options');
 
@@ -89,13 +81,6 @@ function render_leftbox_input(){
 	}
 }
 
-function render_leftbox_text_input(){
-	$origText = get_option( 'brokendoorfront', 0);
-	?>
-	<textarea id="left_home_box_page_text" name="brokendoorfront[left_home_box_page_text]"><?php echo $origText['left_home_box_page_text']; ?></textarea>
-	<?php
-}
-
 function render_rightbox_input(){
 	$args = array(
 		'sort_order' => 'ASC' ,
@@ -118,13 +103,13 @@ function render_rightbox_input(){
 	}
 }
 
-function render_rightbox_text_input(){
+function render_youtube_link_input(){
 	$origText = get_option( 'brokendoorfront', 0);
 	if($origText == 0){
-		echo 'nothing was found essay';
+		$origText['front_youtube_link'] = 'nothing was found essay';
 	}
 	?>
-	<textarea id="right_home_box_page_text" name="brokendoorfront[right_home_box_page_text]"><?php echo $origText['right_home_box_page_text']; ?></textarea>
+	<input id="front_youtube_link" name="brokendoorfront[front_youtube_link]" value="<?php echo $origText['front_youtube_link']; ?>" />
 	<?php
 }
 
